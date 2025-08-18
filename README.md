@@ -14,7 +14,8 @@ Réalisation du fine-tuning d’un Large Language Model (DistilBERT ou TinyLLaMA
 
 ## Objectif
 
-Le but de ce projet est d’adapter l’un des notebooks (*distilbert-finetuning.ipynb* ou *training-tinyllama.ipynb*) vus lors de la dernière séance à un autre cas d’usage.  
+Le but de ce projet est d’adapter l’un des notebooks ([*distilbert-finetuning.ipynb*](https://github.com/auduvignac/llm-finetuning/blob/main/notebooks/base/distilbert-finetuning.ipynb) ou [*training_tinyllama.ipynb*](https://github.com/auduvignac/llm-finetuning/blob/main/notebooks/base/training_tinyllama.ipynb)  ) vus lors de la dernière séance à un autre cas d’usage.
+
 Vous devez réaliser un fine-tuning d’un LLM en modifiant l’un ou plusieurs des éléments suivants :  
 
 - le **modèle** utilisé  
