@@ -37,4 +37,39 @@ Vous devez réaliser un fine-tuning d’un LLM en modifiant l’un ou plusieurs 
 ### Cas 3 — Vous modifiez le modèle et le dataset
 - Faites la description du modèle (premier item du Cas 1).  
 - Faites la description du dataset (premier item du Cas 2).  
-- Proposez une petite analyse descriptive des performances obtenues.  
+- Proposez une petite analyse descriptive des performances obtenues.
+
+## Création et gestion de l’environnement virtuel
+
+Le projet utilise un environnement virtuel Python pour isoler ses dépendances.  
+Un script `setup_env.py` permet de créer et configurer automatiquement cet environnement à la racine du projet.
+
+### Étapes
+
+1. Vérifier que Python 3.10 (ou supérieur) est installé :
+   ```bash
+   python3.10 --version
+   ```
+2. Créer l’environnement virtuel et installer les dépendances :
+   ```bash
+   python3.10 ./setup_env.py
+   ```
+L’environnement sera automatiquement nommé selon le dossier du projet : en l'occurrence llm-finetuning.
+
+3. Activer l’environnement :
+  - Linux / macOS :
+    ```bash
+    source llm-finetuning/bin/activate
+    ```
+  - Windows (PowerShell) :
+    ```powershell
+    .\llm-finetuning\Scripts\activate
+    ```
+4. (Optionnel) Pour installer les dépendances supplémentaires de développement :
+    ```bash
+    pip install -r requirements-dev.txt
+    ```
+5. Désactiver l’environnement une fois terminé :
+    ```bash
+    deactivate
+    ```
