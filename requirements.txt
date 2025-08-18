@@ -1,0 +1,8 @@
+# requirements.txt
+datasets
+matplotlib
+numpy
+tabulate
+torch
+tqdm
+transformers
