@@ -1,8 +1,11 @@
 # requirements-dev.txt
 -r requirements.txt
 black[jupyter]
+docformatter
 flake8
 isort
 jupyter_contrib_nbextensions
 nbqa
+nbstripout
 pre-commit
+ruff

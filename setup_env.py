@@ -1,23 +1,27 @@
+import importlib.util
 import os
 import platform
 import subprocess
 import sys
 import urllib.request
-import importlib.util
 
 # Nom de l'environnement = nom du répertoire courant
 ENV_NAME = os.path.basename(os.getcwd())
 
 
 def run_cmd(cmd, shell=False):
-    """Exécute une commande shell et affiche le résultat en direct."""
+    """
+    Exécute une commande shell et affiche le résultat en direct.
+    """
     result = subprocess.run(cmd, shell=shell)
     if result.returncode != 0:
         sys.exit(f"Erreur lors de l'exécution de : {' '.join(cmd)}")
 
 
 def install_requirements_colab(requirements_url):
-    """Installe uniquement les dépendances manquantes sur Colab."""
+    """
+    Installe uniquement les dépendances manquantes sur Colab.
+    """
     print("⚡ Exécution sur Colab : vérification des dépendances...")
     response = urllib.request.urlopen(requirements_url)
     requirements = response.read().decode("utf-8").splitlines()
@@ -36,7 +40,9 @@ def install_requirements_colab(requirements_url):
 
 
 def setup_local_env():
-    """Crée un venv et installe toutes les dépendances localement."""
+    """
+    Crée un venv et installe toutes les dépendances localement.
+    """
     print(f"📦 Création de l'environnement virtuel : {ENV_NAME}...")
     run_cmd([sys.executable, "-m", "venv", ENV_NAME])
 
