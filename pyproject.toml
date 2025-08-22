@@ -1,0 +1,20 @@
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.ruff]
+line-length = 79
+target-version = "py311"
+fix = true
+show-fixes = true
+select = ["I", "UP", "D", "F"]
+ignore = ["D100", "D104", "D107"]
+
+[tool.docformatter]
+wrap-summaries = 79
+wrap-descriptions = 79
+pre-summary-newline = true
+make-summary-multi-line = true
